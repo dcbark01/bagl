@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache/
 
 # Virtual environments
 .venv
@@ -13,3 +14,6 @@ wheels/
 .vscode/
 .idea/
 .cursor/
+.ruff_cache/
+.coverage
+baml_client/

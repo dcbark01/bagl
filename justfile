@@ -3,6 +3,7 @@
 alias s := sync
 alias f := format
 alias l := lint
+alias d := deps
 alias t := test
 alias pc := precommit
 alias bg := baml-generate
@@ -28,6 +29,10 @@ format:
 lint:
   uv run ruff check --fix
 
+# Check dependencies
+deps:
+  uv run fawltydeps
+
 # Run tests
 test:
   uv run pytest -v --cov=src --cov-report=html --cov-report=term
@@ -37,6 +42,7 @@ precommit:
   just sync
   just format
   just lint
+  just deps
   just test
 
 # Generate baml client code

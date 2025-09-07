@@ -1,3 +1,5 @@
+from baml_client.sync_client import b
 
-def placeholder_test():
-    assert True
+
+def test_placeholder():
+    assert hasattr(b, "Completion")
